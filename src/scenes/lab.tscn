@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/entities/gdscript.gd" type="Script" id=1]
 [ext_resource path="res://src/entities/csharp.cs" type="Script" id=2]
+[ext_resource path="res://src/entities/javascript.jsx" type="Script" id=3]
 
 [node name="lab" type="Node2D"]
 
@@ -13,7 +14,10 @@ script = ExtResource( 2 )
 
 [node name="cpp" type="Node" parent="."]
 
+[node name="visualscript" type="Node" parent="."]
+
 [node name="javascript" type="Node" parent="."]
+script = ExtResource( 3 )
 
 [node name="typescript" type="Node" parent="."]
 
@@ -23,4 +27,10 @@ script = ExtResource( 2 )
 
 [node name="python" type="Node" parent="."]
 
-[node name="go" type="Node" parent="."]
+[node name="rust" type="Node" parent="."]
+
+[node name="golang" type="Node" parent="."]
+
+[node name="haskell" type="Node" parent="."]
+
+[node name="dlang" type="Node" parent="."]
