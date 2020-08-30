@@ -1,14 +1,8 @@
-export default class Javascript extends godot.Node {
-	// Declare member variables here. Examples:
+export default class JavaScript extends godot.Node {
 	a = 2;
 	b = "text";
 
-	// Called when the node enters the scene tree for the first time.
 	_ready() {
 		godot.print(this.name)
-	}
-
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	_process(delta) {
 	}
 }

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/entities/gdscript.gd" type="Script" id=1]
 [ext_resource path="res://src/entities/csharp.cs" type="Script" id=2]
 [ext_resource path="res://src/entities/javascript.jsx" type="Script" id=3]
+[ext_resource path="res://src/entities/typescript.jsx" type="Script" id=4]
 
 [node name="lab" type="Node2D"]
 
@@ -20,6 +21,7 @@ script = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="typescript" type="Node" parent="."]
+script = ExtResource( 4 )
 
 [node name="lua" type="Node" parent="."]
 
