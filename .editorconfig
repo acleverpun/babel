@@ -12,3 +12,6 @@ trim_trailing_whitespace = true
 
 [*.{diff,md}]
 trim_trailing_whitespace = false
+
+[*.nim]
+indent_style = space
