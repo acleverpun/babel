@@ -1,0 +1,9 @@
+[gd_scene format=2]
+
+[node name="player" type="KinematicBody2D"]
+
+[node name="polygon" type="Polygon2D" parent="."]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, -16, 0, -16 )
+
+[node name="collision" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, -16, 0, -16 )
