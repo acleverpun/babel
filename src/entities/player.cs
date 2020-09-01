@@ -9,10 +9,14 @@ public class player : KinematicBody2D {
 	private Vector2 velocity = Vector2.Zero;
 
 	public override void _Ready() {
-		SetPhysicsProcess(true);
+		GD.PrintS(this.Name, "reporting for duty");
 	}
 
 	public override void _PhysicsProcess(float delta) {
+		movement(delta);
+	}
+
+	public void movement(float delta) {
 		float speedMod = 1F;
 		velocity = Vector2.Zero;
 
