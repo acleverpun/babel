@@ -13,5 +13,8 @@ trim_trailing_whitespace = true
 [*.{diff,md}]
 trim_trailing_whitespace = false
 
-[*.nim]
+[*.{nim,py}]
 indent_style = space
+
+[*.py]
+indent_size = 4

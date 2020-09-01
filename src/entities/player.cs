@@ -3,8 +3,7 @@ using System;
 
 public class player : KinematicBody2D {
 	public float speed = 50F;
-
-	private float runMod = 4F;
+	public float runMod = 4F;
 
 	private Vector2 velocity = Vector2.Zero;
 

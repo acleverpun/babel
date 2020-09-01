@@ -1,6 +1,7 @@
 import ospaths
 
 switch("nimcache", ".nimcache"/hostOS/hostCPU)
+switch("threads", "on")
 
 when defined(macosx):
   when defined(ios):
@@ -46,4 +47,3 @@ else:
 
 when not defined(release):
   switch("debugger", "native")
-

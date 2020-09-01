@@ -1,7 +1,7 @@
 # Copyright 2017 Xored Software, Inc.
 
 import nake
-import os, ospaths, times
+import os, times
 import godotapigen
 
 proc genGodotApi() =
@@ -13,7 +13,7 @@ proc genGodotApi() =
     echo "Invalid GODOT_BIN path: " & godotBin
     quit(-1)
 
-  const targetDir = "src"/"godotapi"
+  const targetDir = "lib"/"godotapi"
   createDir(targetDir)
   const jsonFile = targetDir/"api.json"
   if not fileExists(jsonFile) or
@@ -40,15 +40,12 @@ task "build", "Builds the client for the current platform":
     elif defined(linux):
       "nim_linux" & bitsPostfix & ".so"
     else: nil
-  createDir("_dlls")
-  withDir "src":
-    direShell(["nimble", "c", ".."/"src"/"babel.nim", "-o:.."/"_dlls"/libFile])
+  createDir("lib"/"headers")
+  direShell(["nimble", "c", "src"/"babel.nim", "-o:lib"/"headers"/libFile])
 
 task "clean", "Remove files produced by build":
-  removeDir(".nimcache")
   removeDir("src"/".nimcache")
-  removeDir("src"/"godotapi")
-  removeDir("_dlls")
+  removeDir("lib"/"godotapi")
+  removeDir("lib"/"headers")
+  removeDir(".nimcache")
   removeFile("nakefile")
-  removeFile("nakefile.exe")
-

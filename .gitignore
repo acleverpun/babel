@@ -7,8 +7,8 @@ data_*/
 
 # nim
 .nimcache
-/_dlls
+/lib/godotapi
+/lib/headers
 /nakefile
 /nakefile.json
-/src/godotapi
 nimcache
