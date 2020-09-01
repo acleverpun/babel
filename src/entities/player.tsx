@@ -12,18 +12,14 @@ export default class Player extends godot.KinematicBody2D {
 		this.movement(delta);
 	}
 
-	movement(delta: number) {
+	movement(_delta: number) {
 		var speedMod = 1.0;
 		this.velocity = godot.Vector2.ZERO;
 
-		// @ts-ignore
-		if (godot.Input.is_action_pressed("move.up")) this.velocity += godot.Vector2.UP;
-		// @ts-ignore
-		if (godot.Input.is_action_pressed("move.down")) this.velocity += godot.Vector2.DOWN;
-		// @ts-ignore
-		if (godot.Input.is_action_pressed("move.left")) this.velocity += godot.Vector2.LEFT;
-		// @ts-ignore
-		if (godot.Input.is_action_pressed("move.right")) this.velocity += godot.Vector2.RIGHT;
+		if (godot.Input.is_action_pressed("move.up")) (this.velocity as any) += godot.Vector2.UP;
+		if (godot.Input.is_action_pressed("move.down")) (this.velocity as any) += godot.Vector2.DOWN;
+		if (godot.Input.is_action_pressed("move.left")) (this.velocity as any) += godot.Vector2.LEFT;
+		if (godot.Input.is_action_pressed("move.right")) (this.velocity as any) += godot.Vector2.RIGHT;
 
 		if (godot.Input.is_action_pressed("move.run")) speedMod = this.runMod;
 

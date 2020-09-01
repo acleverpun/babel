@@ -11,7 +11,7 @@ func _ready():
 func _physics_process(dt):
 	movement(dt)
 
-func movement(dt):
+func movement(_dt):
 	var speedMod = 1.0
 	velocity = Vector2.ZERO
 
@@ -24,4 +24,4 @@ func movement(dt):
 
 	velocity = velocity.normalized()
 
-	move_and_slide(velocity * speed * speedMod)
+	velocity = move_and_slide(velocity * speed * speedMod)

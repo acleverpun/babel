@@ -3,6 +3,7 @@
 
 # mono
 .mono/
+/mono_crash.*
 data_*/
 
 # nim

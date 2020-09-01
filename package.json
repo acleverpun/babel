@@ -1,4 +1,5 @@
 {
+	"sourceType": "module",
 	"scripts": {
 		"watch": "tsc -w -p .",
 		"compile": "tsc -p ."

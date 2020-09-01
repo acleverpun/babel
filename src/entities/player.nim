@@ -2,8 +2,8 @@ import godot
 import godotapi / [kinematic_body_2d, input]
 
 gdobj Player of KinematicBody2D:
-  var speed = 50.0
-  var runMod = 4.0
+  var speed* = 50.0
+  var runMod* = 4.0
 
   var velocity: Vector2
 
